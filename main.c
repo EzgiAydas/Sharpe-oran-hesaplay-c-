@@ -1,10 +1,10 @@
-#include <stdio.h> // C dilindeki temel girdi ve çıktı işlemlerini gerçekleştiren fonksiyonların tanımlarını içerir.
+#include <stdio.h> // C dilindeki temel girdi ve Ã§Ä±ktÄ± iÅŸlemlerini gerÃ§ekleÅŸtiren fonksiyonlarÄ±n tanÄ±mlarÄ±nÄ± iÃ§erir.
 
 // Girdi tamponunu temizleyen fonksiyon
 void clearInputBuffer(void) {
     int c;
     while ((c = getchar()) != '\n' && c != EOF) {
-        // Kullanıcı 'Enter' tuşuna basana kadar veya dosya sonuna gelene kadar tüm karakterleri okur ve yok sayar.
+        // KullanÄ±cÄ± 'Enter' tuÅŸuna basana kadar veya dosya sonuna gelene kadar tÃ¼m karakterleri okur ve yok sayar.
 		 }
 }
 
@@ -14,7 +14,7 @@ int main(void) {
     printf("=== Sharpe Orani Hesaplayici ===\n");
 
     printf("Yatirim getirisi (%% cinsinden): ");
-    if (scanf("%lf", &yatirim_getirisi) != 1) { // Okunan değerin basariyla atanip atanmadigini kontrol eder.
+    if (scanf("%lf", &yatirim_getirisi) != 1) { // Okunan deÄŸerin basariyla atanip atanmadigini kontrol eder.
         printf("Gecersiz giris! Lutfen sayi giriniz.\n");
         return 1;
     }
@@ -32,9 +32,10 @@ int main(void) {
         printf("Gecersiz giris! Lutfen sayi giriniz.\n");
         return 1;
     }
-    clearInputBuffer(
-);
-    // Negatif veya sıfır değer kontrolü
+    clearInputBuffer();
+    
+    
+    // Negatif veya sÄ±fÄ±r deÄŸer kontrolÃ¼
     if (standart_sapma <= 0) {
         printf("Standart sapma 0 veya negatif olamaz.\n");
         return 1;
@@ -45,7 +46,7 @@ int main(void) {
 
     printf("\nSharpe Orani = %.2f\n", sharpe_orani);
 
-    // Yorumsal değerlendirme
+    // Yorumsal deÄŸerlendirme
     if (sharpe_orani < 0)
         printf("-> Sharpe orani %.2f: Risk-getiri orani negatif, kotu bir performans. Iyi gunler dileriz!\n", sharpe_orani);
     else if (sharpe_orani == 0)
@@ -62,3 +63,4 @@ int main(void) {
     return 0;
 }
 
+   
