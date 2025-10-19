@@ -58,7 +58,7 @@ int main(void) {
     else if (sharpe_orani < 3)
         printf("-> Sharpe orani %.2f: Cok iyi bir performans.Iyi gunler dileriz!\n", sharpe_orani);
     else
-        printf("-> Sharpe orani %.2f: Mukemmel bir performans!Iyi gunler\n", sharpe_orani);
+        printf("-> Sharpe orani %.2f: Mukemmel bir performans!Iyi gunler dileriz\n", sharpe_orani);
 
     return 0;
 }
